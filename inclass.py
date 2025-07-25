@@ -20,11 +20,11 @@ def get_pokemon_data(pokemon_identifier):
         data = response.json()
         pokemon = {
         'name': data['name'],
-        'id': data['id'],
+        'pokemon_id': data['id'],
         'hp': data['stats'][0]['base_stat'],
         'attack': data['stats'][1]['base_stat'],
         'sprite_url': data['sprites']['other']['dream_world']['front_default'],
-        'type': data['types'][0]['type']['name']
+        'pokemon_type': data['types'][0]['type']['name']
         }
         return pokemon
     else:
